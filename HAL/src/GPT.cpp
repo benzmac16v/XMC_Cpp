@@ -5,20 +5,26 @@
  *      Author: smithj
  */
 
-#include "../header/GPT.h"
+#include "GPT.h"
 
 namespace HAL
 {
 
-    GPT::GPT ()
+    HAL::GPT::GPT ( XMC_CCU4_MODULE_t ccu_ptr, XMC_CCU4_SLICE_t slice_prt, void * isr_func, int32_t freq )
     {
-        // TODO Auto-generated constructor stub
-
+        this->ccu_config.module_frequency = 144000000U;
+        this->ccu_config.module_ptr = ccu_ptr;
+        this->ccu_config.mcs_action = (XMC_CCU4_SLICE_MCMS_ACTION_t)XMC_CCU4_SLICE_MCMS_ACTION_TRANSFER_PR_CR;
+        this->ccu_config.syncstart_trigger_msk = XMC_SCU_CCU_TRIGGER_CCU40;
+        this->ccu_config.is_initialized = true;
     }
 
-    GPT::~GPT ()
+    void HAL::GPT::startTimer (void)
     {
-        // TODO Auto-generated destructor stub
-    }
 
+    }
+    void HAL::GPT::stopTimer (void)
+    {
+
+    }
 } /* namespace HAL */
