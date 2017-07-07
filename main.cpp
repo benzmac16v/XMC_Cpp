@@ -7,7 +7,8 @@
 
 #include <xmc_common.h>
 #include <xmc_gpio.h>
-#include "HAL/header/GPIO.h"
+//#include "HAL/header/GPIO.h"
+#include "mcal/xmc4/mcal_led.h"
 
 /**
 
@@ -19,13 +20,6 @@
 
 uint32_t ledOn = 1;
 
-XMC_GPIO_CONFIG_t led1Config =
-    { .mode = XMC_GPIO_MODE_OUTPUT_PUSH_PULL, .output_level =
-            XMC_GPIO_OUTPUT_LEVEL_HIGH, .output_strength =
-            XMC_GPIO_OUTPUT_STRENGTH_STRONG_SHARP_EDGE };
-
-HAL::GPIO led1(XMC_GPIO_PORT5, 9, led1Config);
-
 int main (void)
 {
 
@@ -34,11 +28,11 @@ int main (void)
     {
         if (ledOn == 1)
         {
-            led1.setHigh();
+            mcal::led::led0.turnOn();
         }
         else
         {
-            led1.setLow();
+        		mcal::led::led0.turnOff();
         }
     }
     return 0;

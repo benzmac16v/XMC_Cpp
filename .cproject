@@ -127,13 +127,6 @@
 				<option id="cmsis.device.pack.vendor" value="Infineon"/>
 				<option id="cmsis.device.pack.name" value="XMC4000_DFP"/>
 				<option id="cmsis.device.pack.version" value="2.7.1"/>
-				<option id="cmsis.board.name" value="XMC4700 Relax Kit"/>
-				<option id="cmsis.board.revision" value="V1"/>
-				<option id="cmsis.board.vendor.name" value="Infineon"/>
-				<option id="cmsis.board.clock" value="32768"/>
-				<option id="cmsis.board.pack.vendor" value="Infineon"/>
-				<option id="cmsis.board.pack.name" value="XMC4000_DFP"/>
-				<option id="cmsis.board.pack.version" value="2.7.1"/>
 				<option id="cmsis.core.name" value="Cortex-M4"/>
 				<option id="cmsis.compiler.define" value="XMC4700_F144x2048"/>
 				<memory section="IRAM1" size="0x3FFC0" start="0x20000000" startup="0"/>
