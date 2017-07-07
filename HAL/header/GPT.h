@@ -16,8 +16,9 @@
 
 namespace HAL
 {
-    typedef struct XMC_CCU_CONFIG
+    class XMC_CCU_CONFIG
     {
+    		public
         uint32_t module_frequency;
         XMC_SCU_CCU_TRIGGER_t syncstart_trigger_msk;
         XMC_CCU4_MODULE_t* module_ptr;
@@ -25,7 +26,7 @@ namespace HAL
         bool is_initialized;
     } XMC_CCU_Config_t;
 
-    typedef struct XMC_CCU4_SLICE_COMPARE_CONFIG_t
+    typedef struct
     {
         union
         {
@@ -60,18 +61,18 @@ namespace HAL
     typedef struct TIMER
     {
         uint32_t time_interval_value_us; /**< Timer interval value for which event is being generated */
-        const uint32_t timer_max_value_us; /**< Maximum timer value in micro seconds for the available clock */
-        const uint32_t timer_min_value_us; /**< Minimum timer value in micro seconds for the available clock */
-        const uint32_t shadow_mask; /**< shadow transfer mask for the selected timer */
-        XMC_CCU_Config_t* const global_ccu4_handler; /**< Reference to CCU4GLOBAL APP handler */
+        uint32_t timer_max_value_us; /**< Maximum timer value in micro seconds for the available clock */
+        uint32_t timer_min_value_us; /**< Minimum timer value in micro seconds for the available clock */
+        uint32_t shadow_mask; /**< shadow transfer mask for the selected timer */
+        XMC_CCU_Config_t* global_ccu4_handler; /**< Reference to CCU4GLOBAL APP handler */
         XMC_CCU4_SLICE_t* const ccu4_slice_ptr; /**< Reference to CCU4-CC4 slice identifier data handler */
-        const uint8_t ccu4_slice_number; /* Timer being used */
-        XMC_CCU4_SLICE_COMPARE_CONFIG_t* const ccu4_slice_config_ptr; /**< Reference to initialization data structure of
+        uint8_t ccu4_slice_number; /* Timer being used */
+        XMC_CCU4_SLICE_COMPARE_CONFIG_t* ccu4_slice_config_ptr; /**< Reference to initialization data structure of
          the core timer functionality */
-        XMC_CCU4_SLICE_SR_ID_t const ccu4_period_match_node; /**< Service Request Id for period match event */
+        XMC_CCU4_SLICE_SR_ID_t ccu4_period_match_node; /**< Service Request Id for period match event */
         uint16_t period_value; /**< Period value to be loaded into timer for the corresponding time tick */
-        bool const start_control; /**< Indicate whether to start the APP during initialization itself */
-        bool const period_match_enable; /**< Indicate the generation of period match event */
+        bool start_control; /**< Indicate whether to start the APP during initialization itself */
+        bool period_match_enable; /**< Indicate the generation of period match event */
         bool initialized; /* flag to indicate the initialization state of the APP instance */
     } Timer_t;
 
@@ -79,15 +80,18 @@ namespace HAL
     {
     public:
         // Constructor
-        GPT ( XMC_CCU4_MODULE_t ccu_ptr, XMC_CCU4_SLICE_t slice_prt, void * isr_func, int32_t freq );
+        GPT ( XMC_CCU4_MODULE_t* ccu_ptr, XMC_CCU4_SLICE_t* slice_ptr, void * isr_func, int32_t freq );
 
-        void HAL::GPT::startTimer(void);
-        void HAL::GPT::stopTimer(void);
+        void startTimer(void);
+        void stopTimer(void);
 
     private:
         XMC_CCU_Config_t    ccu_config;
         XMC_CCU4_Slice_Compare_Config_t ccu_slice_config;
         Timer_t timer_config;
+
+        void init(Timer_t* handle_ptr);
+        void shadowTransfer(Timer_t* handle_ptr);
     };
 
 } /* namespace HAL */
