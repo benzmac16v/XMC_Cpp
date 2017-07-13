@@ -1,12 +1,12 @@
 /*
- * re_access.h
+ * reg_access.h
  *
  *  Created on: Jul 6, 2017
  *      Author: smithj
  */
 
-#ifndef MCAL_REG_ACCESS_H_
-#define MCAL_REG_ACCESS_H_
+#ifndef MCAL_REG_ACCESS_DYNAMIC_H_
+#define MCAL_REG_ACCESS_DYNAMIC_H_
 
 
 namespace mcal
@@ -15,7 +15,7 @@ namespace mcal
 	{
 		template<typename register_address_type,
 				 typename register_value_type>
-		struct access final
+		struct access_dyn final
 		{
 			static void	reg_set(register_address_type addr, register_value_type val)
 			{

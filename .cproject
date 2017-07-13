@@ -56,7 +56,6 @@
 							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.1303883138" name="Cross ARM GNU C Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler">
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths.351017106" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths" useByScannerDiscovery="true" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/XMC_EXP1/Libraries/CMSIS/Include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/HAL/header}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/XMC_EXP1/Libraries/XMCLib/inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/XMC_EXP1/Libraries/CMSIS/Infineon/XMC4700_series/Include}&quot;"/>
 								</option>
@@ -73,7 +72,6 @@
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths.1673665883" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths" useByScannerDiscovery="true" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/XMC_EXP1/Libraries/CMSIS/Include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/HAL/header}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/XMC_EXP1/Libraries/CMSIS/Infineon/XMC4700_series/Include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/XMC_EXP1/Libraries/XMCLib/inc}&quot;"/>
 								</option>

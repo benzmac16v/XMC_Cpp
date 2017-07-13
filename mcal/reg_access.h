@@ -1,5 +1,5 @@
 /*
- * re_access.h
+ * reg_access.h
  *
  *  Created on: Jul 6, 2017
  *      Author: smithj
