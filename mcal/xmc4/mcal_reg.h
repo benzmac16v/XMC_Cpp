@@ -58,7 +58,7 @@ constexpr std::uint32_t ccu4x_GCSC_offset	= UINT32_C( 0x014 );
 constexpr std::uint32_t ccu4x_GCST_offset	= UINT32_C( 0x018 );
 constexpr std::uint32_t ccu4x_MIDR_offset	= UINT32_C( 0x080 );
 
-// CCU4 Slice Offsets
+// CCU4 Slice Addresses
 constexpr std::uint32_t ccu4x_CC0_offset		= UINT32_C( 0x100 );
 constexpr std::uint32_t ccu4x_CC1_offset		= UINT32_C( 0x200 );
 constexpr std::uint32_t ccu4x_CC2_offset		= UINT32_C( 0x300 );

@@ -9,6 +9,7 @@
 #define MCAL_XMC4_MCAL_REG_ACCESS_H_
 
 #include "../reg_access.h"
+#include "../reg_access_dynamic.h"
 #include "../xmc4/mcal_reg.h"
 
 
