@@ -126,7 +126,7 @@ __Vectors:
     Entry   DSD0_7_IRQHandler           /* Handler name for SR DSD0_7    */
     Entry   DAC0_0_IRQHandler           /* Handler name for SR DAC0_0    */
     Entry   DAC0_1_IRQHandler           /* Handler name for SR DAC0_0    */
-    Entry   CCU40_0_IRQHandler          /* Handler name for SR CCU40_0   */
+    Entry   CCU40_0_IRQHandler        /* Handler name for SR CCU40_0   */
     Entry   CCU40_1_IRQHandler          /* Handler name for SR CCU40_1   */
     Entry   CCU40_2_IRQHandler          /* Handler name for SR CCU40_2   */
     Entry   CCU40_3_IRQHandler          /* Handler name for SR CCU40_3   */

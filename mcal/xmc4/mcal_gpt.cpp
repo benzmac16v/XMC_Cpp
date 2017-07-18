@@ -12,7 +12,7 @@ namespace mcal
 
 	namespace gpt
 	{
-		//GPT_type timer1;
+		GPT_type timer1;
 	}
 }
 

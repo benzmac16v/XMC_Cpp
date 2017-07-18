@@ -94,6 +94,24 @@ constexpr std::uint32_t cc4x_SWR_offset		= UINT32_C( 0x0B0 );
 constexpr std::uint32_t cc4x_ECRD0_offset	= UINT32_C( 0x0B0 );
 constexpr std::uint32_t cc4x_ECRD1_offset	= UINT32_C( 0x0BC );
 
+// SCU Register address
+constexpr std::uint32_t scu_address			= UINT32_C( 0x50004000 );
+
+// SCU Register grouping offsets
+constexpr std::uint32_t scu_gcu_offset		= UINT32_C( 0x0 );
+constexpr std::uint32_t scu_pcu_offset		= UINT32_C( 0x200 );
+constexpr std::uint32_t scu_hcu_offset		= UINT32_C( 0x300 );
+constexpr std::uint32_t scu_rcu_offset		= UINT32_C( 0x400 );
+constexpr std::uint32_t scu_ccu_offset		= UINT32_C( 0x600 );
+
+// SCU RCU register offsets
+constexpr std::uint32_t scu_rcu_prset0_offset		= UINT32_C( 0x10 );
+constexpr std::uint32_t scu_rcu_prclr0_offset		= UINT32_C( 0x14 );
+
+// SCU CCU Register offsets
+constexpr std::uint32_t scu_ccu_clkset_offset		= UINT32_C( 0x4 );
+
+// SCU Registers
 
 
 
